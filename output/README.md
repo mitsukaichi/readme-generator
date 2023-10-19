@@ -1,8 +1,8 @@
-# a [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Readme generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description 
   
-   b
+  This application allows user to generate high quality readme file
 
   ## Table of Contents 
 
@@ -15,25 +15,25 @@
 
   ## Installation
 
-  c 
+  Install 
 
   ## Usage
 
-  d 
+  instructions 
 
   ## Credits
 
-  e
+  No collaborators
 
   ## Tests
 
-  d
+  No test available
 
   ## Questions
 
-  [Author on GitHub](https://github.com/g)
+  [Author on GitHub](https://github.com/mitsukaichi)
 
-  Email: e
+  Email: mitukaichi@gmail.com
   
   ## License
   https://opensource.org/license/mit/

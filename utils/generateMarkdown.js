@@ -975,7 +975,7 @@ function renderLicenseSection(license,name) {
   } else {
     let selectedLicense = license[0].split(" ")[0];
     let selectedLicenseElement = licenseData.find(item => item.name === selectedLicense);
-    let username = name;
+    username = name;
     return selectedLicenseElement.description;
   }
 }
