@@ -76,7 +76,7 @@ function init() {
     .prompt(questions)
     .then((response) => {
       
-      fs.writeFile("newREADME.md",generateMarkdown(response),(err) =>
+      fs.writeFile("./output/README.md",generateMarkdown(response),(err) =>
       err ? console.error(err) : console.log('Your readme file is successfully saved'));
       
     });
