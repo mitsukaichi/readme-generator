@@ -1,1 +1,0 @@
-{"title":"Title","descriptions":"descriptions","installation instructions":"install","Usage":"enjoy","Credits":"N/A","License":[],"Tests":"N/A","Username":"mitsukaichi","Email":"mitukaichi@gmail.com"}

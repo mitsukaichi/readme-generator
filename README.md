@@ -15,3 +15,7 @@
 
 - Video
 
+## Resources referred to 
+
+- [Get the current year in JavaScript](https://stackoverflow.com/questions/6002254/get-the-current-year-in-javascript)
+

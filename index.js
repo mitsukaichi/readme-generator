@@ -18,25 +18,25 @@ const questions = [
   },
   {
     type: "input",
-    name: "installation instructions",
+    name: "installation_instructions",
     message: "Expalin how to install your application",
     default: "",
   },
   {
     type: "input",
-    name: "Usage",
+    name: "usage",
     message: "Provide instructions and examples for use. ",
     default: "",
   },
   {
     type: "input",
-    name: "Credits",
+    name: "credits",
     message: "List your collaborators, if any, with links to their GitHub profiles.",
-    default: "N/A",
+    default: "No collaborators",
   },
   {
     type: "checkbox",
-    name: "License",
+    name: "license",
     message: "Choose the license most applicable to your application. Check https://choosealicense.com/ for more details",
     choices: ["MIT Licence: A short and simple permissive license with conditions only requiring preservation of copyright and license notices",
               "GNU General Public License v3.0: Allow ets people do almost anything they want with your project, except distributing closed source versions.",
@@ -45,33 +45,36 @@ const questions = [
   },
   {
     type: "input",
-    name: "Tests",
+    name: "tests",
     message: "Provide tests for your application.",
-    default: "N/A",
+    default: "No test available",
   },
   {
     type: "input",
-    name: "Username",
+    name: "username",
     message: "Provide your GitHub username.",
     default: "",
   },
   {
     type: "input",
-    name: "Email",
+    name: "email",
     message: "Provide your email address for people with questionst to reach out to. This data will be published on GitHub.",
     default: "",
   }
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName,JSON.stringify(data),(err) =>
+      err ? console.error(err) : console.log('Your readme file is successfully saved'));
+}
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer
     .prompt(questions)
     .then((response) => {
-      fs.appendFile('readme.md',JSON.stringify(response),(err) =>
+      fs.writeFile("response.json",JSON.stringify(response),(err) =>
       err ? console.error(err) : console.log('Your readme file is successfully saved'));
     });
 }
