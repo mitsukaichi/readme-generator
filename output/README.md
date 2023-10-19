@@ -15,15 +15,15 @@
 
   ## Installation
 
-  1. Download all the files in this reposotory 
+  Download all the files in this reposotory, then open the terminal, move to the directory the downloaded files are stored. Install npm packages, inquire and fs 
 
   ## Usage
 
-  2. Open the terminal, move to the directory the downloaded files are stored 
+  Open the terminal, move to the directory the downloaded files are stored. Type node index.js and answer all the prompted questions. Once you answer all the questions, the generated readme is available in the output folder. 
 
   ## Credits
 
-  3. Install npm packages, inquire and fs
+  No collaborators
 
   ## Tests
 
@@ -40,7 +40,7 @@
   
       MIT License
   
-      Copyright (c) 2023 undefined
+      Copyright (c) 2023 mitsukaichi
       
       Permission is hereby granted, free of charge, to any person obtaining a copy
       of this software and associated documentation files (the "Software"), to deal

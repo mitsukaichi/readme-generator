@@ -13,7 +13,8 @@
 
 ## Installation
 
-- Video
+- [Video](https://drive.google.com/file/d/1QIx_d2j1Rob6E1C6yKhZ0HnaR3-DK4qs/view)
+
 
 ## Resources referred to 
 
