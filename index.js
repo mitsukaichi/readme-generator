@@ -41,8 +41,7 @@ const questions = [
     choices: ["MIT Licence: A short and simple permissive license with conditions only requiring preservation of copyright and license notices",
               "GNU General Public License v3.0: Allow ets people do almost anything they want with your project, except distributing closed source versions.",
               "ISC License: Equivalent to the BSD 2-Clause and MIT licenses, removing some language that is no longer necessary.",
-              "Apache License 2.0: A permissive license whose main conditions require preservation of copyright and license notices.",
-              "GNU GPLv3: Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications"]
+              "Apache License 2.0: A permissive license whose main conditions require preservation of copyright and license notices."]              
   },
   {
     type: "input",
@@ -72,7 +71,7 @@ function init() {
   inquirer
     .prompt(questions)
     .then((response) => {
-      fs.appendFile('log.txt',JSON.stringify(response),(err) =>
+      fs.appendFile('readme.md',JSON.stringify(response),(err) =>
       err ? console.error(err) : console.log('Your readme file is successfully saved'));
     });
 }
