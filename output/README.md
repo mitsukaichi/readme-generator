@@ -1,8 +1,8 @@
-# a [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Readme generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description 
   
-  b
+  This application allows you to quickly create a high quality readme by simply answering a series of questions.
 
   ## Table of Contents 
 
@@ -15,25 +15,25 @@
 
   ## Installation
 
-  c 
+  1. Download all the files in this reposotory 
 
   ## Usage
 
-  d 
+  2. Open the terminal, move to the directory the downloaded files are stored 
 
   ## Credits
 
-  e
+  3. Install npm packages, inquire and fs
 
   ## Tests
 
-  d
+  No test available
 
   ## Questions
 
-  [Author on GitHub](https://github.com/)
+  [Author on GitHub](https://github.com/mitsukaichi)
 
-  Email: 
+  Email: mitukaichi@gmail.com
   
   ## License
   https://opensource.org/license/mit/

@@ -989,7 +989,7 @@ function renderLicenseSection(license,name) {
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);
-  const licenseSection = renderLicenseSection(data.license, data.name);
+  const licenseSection = renderLicenseSection(data.license, data.username);
 
   return `# ${data.title} ${licenseBadge}
 
