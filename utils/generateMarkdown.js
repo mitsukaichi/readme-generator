@@ -1,11 +1,14 @@
-var currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
+let username = "";
 
 const licenseData = [
   {
     name: "MIT",
     badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
     link: "https://opensource.org/license/mit/",
-    description: `MIT License
+    description: `
+    
+    MIT License
 
     Copyright (c) ${currentYear} ${username}
     
@@ -31,7 +34,9 @@ const licenseData = [
   name: "ISC",
   badge: "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)",
   link: "https://opensource.org/license/isc-license-txt/",
-  description:`ISC License
+  description:`
+  
+  ISC License
 
   Copyright (c) ${currentYear} ${username}
   
@@ -52,7 +57,9 @@ const licenseData = [
   name: "Apache",
   badge: "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]",
   link: "https://www.apache.org/licenses/LICENSE-2.0",
-  description:`         Apache License
+  description:`
+  
+  Apache License
   Version 2.0, January 2004
 http://www.apache.org/licenses/
 
@@ -258,7 +265,9 @@ limitations under the License.`
   name: "GNU",
   badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
   link: "https://www.gnu.org/licenses/gpl-3.0.html",
-  description: `  GNU GENERAL PUBLIC LICENSE
+  description: `
+  
+  GNU GENERAL PUBLIC LICENSE
   Version 3, 29 June 2007
 
 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
@@ -937,37 +946,37 @@ Public License instead of this License.  But first, please read
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let selectedLicense = license.split(" ")[0];
-  let selectedLicenseElement = licenseData.find(item => item.name === selectedLicense);
-  if (selectedLicenseElement){
-    return selectedLicenseElement.badge;
+  if (license.length === 0) {
+    return ""
   } else {
-    return "";
+    let selectedLicense = license[0].split(" ")[0];
+    let selectedLicenseElement = licenseData.find(item => item.name === selectedLicense);
+    return selectedLicenseElement.badge;
   }
 };
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  let selectedLicense = license.split(" ")[0];
-  let selectedLicenseElement = licenseData.find(item => item.name === selectedLicense);
-  if (selectedLicenseElement){
-    return selectedLicenseElement.link;
+  if (license.length === 0) {
+    return ""
   } else {
-    return "";
+    let selectedLicense = license[0].split(" ")[0];
+    let selectedLicenseElement = licenseData.find(item => item.name === selectedLicense);
+    return selectedLicenseElement.link;
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license,username) {
-  let selectedLicense = license.split(" ")[0];
-  let selectedLicenseElement = licenseData.find(item => item.name === selectedLicense);
-  let username = username;
-  if (selectedLicenseElement){
-    return selectedLicenseElement.description;
+function renderLicenseSection(license,name) {
+  if (license.length === 0) {
+    return ""
   } else {
-    return "";
+    let selectedLicense = license[0].split(" ")[0];
+    let selectedLicenseElement = licenseData.find(item => item.name === selectedLicense);
+    let username = name;
+    return selectedLicenseElement.description;
   }
 }
 
@@ -975,7 +984,7 @@ function renderLicenseSection(license,username) {
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);
-  const licenseSection = renderLicenseSection(data.license, data.username);
+  const licenseSection = renderLicenseSection(data.license, data.name);
 
   return `# ${data.title} ${licenseBadge}
 
@@ -986,6 +995,11 @@ function generateMarkdown(data) {
   ## Table of Contents 
 
   * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  * [License](#license)
 
   ## Installation
 
@@ -1005,16 +1019,17 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  Reach out to the [author](https://github.com/${data.username})
+  [Author on GitHub](https://github.com/${data.username})
+
   Email: ${data.email}
   
-  ##License
+  ## License
   ${licenseLink}
   ${licenseSection}
 
 `;
-}
+};
 
-module.exports = generateMarkdown;
+export default generateMarkdown;
 
 

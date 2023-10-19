@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from 'inquirer';
 import * as fs from 'node:fs';
+import generateMarkdown from './utils/generateMarkdown.js';
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -74,8 +75,10 @@ function init() {
   inquirer
     .prompt(questions)
     .then((response) => {
-      fs.writeFile("response.json",JSON.stringify(response),(err) =>
+      
+      fs.writeFile("newREADME.md",generateMarkdown(response),(err) =>
       err ? console.error(err) : console.log('Your readme file is successfully saved'));
+      
     });
 }
 
