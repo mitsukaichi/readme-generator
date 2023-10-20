@@ -20,7 +20,7 @@ This project was done as the eventh assignment of a codind bootcamp as part of t
 
 ## Demo
 
-- [Video](https://drive.google.com/file/d/1pYIS3MqqrA325mylZzSi-tmTrQfkcGp9/view)
+- [Video](https://drive.google.com/file/d/1mm4blFpPWsI7ngLreCZfUc_ta3G_KY0H/view?usp=sharing)
 
 ## Resources referred to 
 
